@@ -1,0 +1,357 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Nutrition facts and nutritional ratio planning dashboard"
+  />
+  <title>Nutrition Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand">
+        <div class="brand-icon">N</div>
+        <div>
+          <h1>Nutrition Planner</h1>
+          <p>Food nutrition &amp; ratio planning</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#foods" class="active">Food Database</a>
+        <a href="#planner">Daily Planner</a>
+        <a href="#summary">Summary</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Page introduction -->
+    <section class="page-intro">
+      <div>
+        <span class="eyebrow">NUTRITION DATABASE</span>
+        <h2>Food Nutrition Facts</h2>
+        <p>
+          Explore nutritional information and build balanced meal plans
+          based on your daily nutrition targets.
+        </p>
+      </div>
+
+      <button class="primary-button" type="button">
+        + Add Food
+      </button>
+    </section>
+
+    <!-- Nutrition target cards -->
+    <section class="target-grid" id="summary" aria-label="Daily nutrition targets">
+
+      <article class="target-card calories">
+        <div class="card-icon">🔥</div>
+        <div>
+          <span>Calories</span>
+          <strong>2,000 <small>kcal</small></strong>
+          <p>Daily target</p>
+        </div>
+      </article>
+
+      <article class="target-card protein">
+        <div class="card-icon">P</div>
+        <div>
+          <span>Protein</span>
+          <strong>120 <small>g</small></strong>
+          <p>24% of calories</p>
+        </div>
+      </article>
+
+      <article class="target-card carbs">
+        <div class="card-icon">C</div>
+        <div>
+          <span>Carbohydrates</span>
+          <strong>250 <small>g</small></strong>
+          <p>50% of calories</p>
+        </div>
+      </article>
+
+      <article class="target-card fat">
+        <div class="card-icon">F</div>
+        <div>
+          <span>Fat</span>
+          <strong>58 <small>g</small></strong>
+          <p>26% of calories</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Food database -->
+    <section class="database-section" id="foods">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FOOD DATABASE</span>
+          <h2>Nutrition Facts</h2>
+        </div>
+
+        <div class="database-actions">
+          <label class="search-box">
+            <span class="search-icon">⌕</span>
+            <input
+              type="search"
+              placeholder="Search food..."
+              aria-label="Search food"
+            />
+          </label>
+
+          <select aria-label="Filter food category">
+            <option>All Categories</option>
+            <option>Grains</option>
+            <option>Protein</option>
+            <option>Vegetables</option>
+            <option>Fruit</option>
+            <option>Dairy</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="nutrition-table">
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Serving</th>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Carbs</th>
+              <th>Fat</th>
+              <th>Fiber</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>
+                <div class="food-name">
+                  <div class="food-avatar grain">R</div>
+                  <div>
+                    <strong>Brown Rice</strong>
+                    <span>Grains</span>
+                  </div>
+                </div>
+              </td>
+              <td>100 g</td>
+              <td>123 kcal</td>
+              <td>2.7 g</td>
+              <td>25.6 g</td>
+              <td>1.0 g</td>
+              <td>1.6 g</td>
+              <td>
+                <button class="add-button" type="button">+</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="food-name">
+                  <div class="food-avatar protein-food">C</div>
+                  <div>
+                    <strong>Chicken Breast</strong>
+                    <span>Protein</span>
+                  </div>
+                </div>
+              </td>
+              <td>100 g</td>
+              <td>165 kcal</td>
+              <td>31.0 g</td>
+              <td>0 g</td>
+              <td>3.6 g</td>
+              <td>0 g</td>
+              <td>
+                <button class="add-button" type="button">+</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="food-name">
+                  <div class="food-avatar vegetable">S</div>
+                  <div>
+                    <strong>Spinach</strong>
+                    <span>Vegetables</span>
+                  </div>
+                </div>
+              </td>
+              <td>100 g</td>
+              <td>23 kcal</td>
+              <td>2.9 g</td>
+              <td>3.6 g</td>
+              <td>0.4 g</td>
+              <td>2.2 g</td>
+              <td>
+                <button class="add-button" type="button">+</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="food-name">
+                  <div class="food-avatar fruit">A</div>
+                  <div>
+                    <strong>Apple</strong>
+                    <span>Fruit</span>
+                  </div>
+                </div>
+              </td>
+              <td>100 g</td>
+              <td>52 kcal</td>
+              <td>0.3 g</td>
+              <td>13.8 g</td>
+              <td>0.2 g</td>
+              <td>2.4 g</td>
+              <td>
+                <button class="add-button" type="button">+</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="food-name">
+                  <div class="food-avatar dairy">Y</div>
+                  <div>
+                    <strong>Greek Yogurt</strong>
+                    <span>Dairy</span>
+                  </div>
+                </div>
+              </td>
+              <td>100 g</td>
+              <td>59 kcal</td>
+              <td>10.0 g</td>
+              <td>3.6 g</td>
+              <td>0.4 g</td>
+              <td>0 g</td>
+              <td>
+                <button class="add-button" type="button">+</button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Daily planner -->
+    <section class="planner-section" id="planner">
+
+      <div class="planner-header">
+        <div>
+          <span class="eyebrow">DAILY PLAN</span>
+          <h2>Nutrition Ratio</h2>
+        </div>
+
+        <span class="target-label">
+          Target: 2,000 kcal
+        </span>
+      </div>
+
+      <div class="planner-grid">
+
+        <div class="ratio-card">
+          <div class="ratio-visual">
+            <div class="ratio-ring">
+              <div class="ratio-center">
+                <strong>100%</strong>
+                <span>Target</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ratio-legend">
+            <div>
+              <span class="legend-dot protein-dot"></span>
+              <span>Protein</span>
+              <strong>24%</strong>
+            </div>
+
+            <div>
+              <span class="legend-dot carbs-dot"></span>
+              <span>Carbohydrates</span>
+              <strong>50%</strong>
+            </div>
+
+            <div>
+              <span class="legend-dot fat-dot"></span>
+              <span>Fat</span>
+              <strong>26%</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-card">
+
+          <div class="progress-row">
+            <div class="progress-label">
+              <span>Calories</span>
+              <strong>1,640 / 2,000 kcal</strong>
+            </div>
+            <div class="progress-bar">
+              <span style="width: 82%;"></span>
+            </div>
+          </div>
+
+          <div class="progress-row">
+            <div class="progress-label">
+              <span>Protein</span>
+              <strong>92 / 120 g</strong>
+            </div>
+            <div class="progress-bar">
+              <span style="width: 77%;"></span>
+            </div>
+          </div>
+
+          <div class="progress-row">
+            <div class="progress-label">
+              <span>Carbohydrates</span>
+              <strong>198 / 250 g</strong>
+            </div>
+            <div class="progress-bar">
+              <span style="width: 79%;"></span>
+            </div>
+          </div>
+
+          <div class="progress-row">
+            <div class="progress-label">
+              <span>Fat</span>
+              <strong>43 / 58 g</strong>
+            </div>
+            <div class="progress-bar">
+              <span style="width: 74%;"></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Nutrition Planner · Food data should be reviewed against an
+        authoritative nutrition database before production use.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
